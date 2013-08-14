@@ -8,7 +8,6 @@ module Spree
 end
 
 require 'spree/dash/engine'
-require 'spree/dash/jirafe'
 
 Spree::Dash::Engine.config.to_prepare do
   Spree::BaseController.send :helper, 'spree/analytics'
