@@ -5,7 +5,7 @@ module Spree
         def token_resource
           has_one :tokenized_permission, :as => :permissable
           delegate :token, :to => :tokenized_permission, :allow_nil => true
-          after_create :create_token
+          # after_create :create_token
         end
       end
 
