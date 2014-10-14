@@ -56,9 +56,6 @@ module Spree
     after_save :save_master
     after_save :set_master_on_hand_to_zero_when_product_has_variants
 
-    delegate :images, :to => :master, :prefix => true
-    alias_method :images, :master_images
-
     has_many :variant_images, :source => :images, :through => :variants_including_master, :order => :position
 
     accepts_nested_attributes_for :variants, :allow_destroy => true
